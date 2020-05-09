@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		PROJECT_ID = 'My First Project'
+		PROJECT_ID = 'refined-engine-262020'
 		CLUSTER_NAME = 'demo-cluster'
 		LOCATION = 'europe-west2-c'
 		CREDENTIALS_ID = 'refined-engine-262020'
