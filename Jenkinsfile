@@ -4,7 +4,7 @@ pipeline {
 		PROJECT_ID = 'My First Project'
 		CLUSTER_NAME = 'demo-cluster'
 		LOCATION = 'europe-west2-c'
-		CREDENTIALS_ID = 'K8user'
+		CREDENTIALS_ID = 'refined-engine-262020'
 	}
 	stages {
 		stage('Checkout Project Code') {
@@ -35,7 +35,7 @@ pipeline {
 			steps {
 				script {
 					/*docker.withRegistry('https://registry.hub.docker.com', 'Docker') */
-					docker.withRegistry('https://eu.gcr.io', 'gcruser@refined-engine-262020.iam.gserviceaccount.com')
+					docker.withRegistry('https://eu.gcr.io')
 					{
 					myimage.push("${env.BUILD_ID}")
 					}
