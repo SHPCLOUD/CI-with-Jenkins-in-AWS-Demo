@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		PROJECT_ID = ‘<Google Cloud Project ID>'
+		PROJECT_ID = ‘My First Project'
 		CLUSTER_NAME = 'demo-cluster'
 		LOCATION = 'europe-west2-c'
 		CREDENTIALS_ID = 'K8user’
