@@ -1,10 +1,10 @@
 pipeline {
 	agent any
 	environment {
-		PROJECT_ID = ‘My First Project'
+		PROJECT_ID = 'My First Project'
 		CLUSTER_NAME = 'demo-cluster'
 		LOCATION = 'europe-west2-c'
-		CREDENTIALS_ID = 'K8user’
+		CREDENTIALS_ID = 'K8user'
 	}
 	stages {
 		stage('Checkout Project Code') {
