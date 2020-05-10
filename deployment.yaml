@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: demoapp
+ name: demogcr
  labels:
-   app: demoapp
+   app: demogcr
 spec:
  replicas: 2
  selector:
   matchLabels:
-   app: demoapp
+   app: demogcr
  template:
   metadata:
    labels:
-    app: demoapp
+    app: demogcr
   spec:
    containers:
-   - name: demoapp
-     image: prativsp/demoapp:tagversion
+   - name: demogcr
+     image: prativsp/demogcr:tagversion
      ports:
      - containerPort: 8080
 
@@ -25,12 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: demoapp
+ name: demogcr
 spec:
  type: LoadBalancer
  selector:
-  app: demoapp
+  app: demogcr
  ports:
   - protocol: TCP
-    port: 5601
+    port: 5602
     targetPort: 8080
