@@ -28,7 +28,7 @@ pipeline {
 			steps {
 				script 
 				{
-					myimage = docker.build("eu.gcr.io/refined-engine-262020/prativsp/demogcr:${env.BUILD_ID}")*/
+					myimage = docker.build("eu.gcr.io/refined-engine-262020/prativsp/demogcr:${env.BUILD_ID}")
 					/*myimage = docker.build("prativsp/demoapp:${env.BUILD_ID}")*/
 				}
 			}
@@ -36,7 +36,7 @@ pipeline {
 		stage("Push Docker Image") {
 			steps {
 				script {
-					docker.withRegistry('https://eu.gcr.io')
+					docker.withRegistry('https://eu.gcr.io') 
 					{
 						myimage.push("${env.BUILD_ID}")
 					}
