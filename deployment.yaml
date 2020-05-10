@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: demogcr
-     image: prativsp/demogcr:tagversion
+     image: eu.gcr.io/refined-engine-262020/prativsp/demogcr:tagversion
      ports:
      - containerPort: 8080
 
